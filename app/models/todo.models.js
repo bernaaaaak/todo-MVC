@@ -3,6 +3,18 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = new Sequelize('sqlite:./db.sqlite3') //let sequelize know about db and its path
 
+
+// POSTGRESQL CONNECTION:
+// $ npm i pg pg-hstore
+// const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname')
+// const sequelize = new Sequelize('postgres://userCH15:12345678@localhost:5432/testCH15')
+
+// MYSQL CONNECTION:
+// $ npm i mysql2 
+// $ npm i mariadb // Alternative
+// const sequelize = new Sequelize('mysql://user:pass@localhost:3306/dbname')
+
+
 const Todo = sequelize.define('todos', {
     title: {
         type: DataTypes.STRING,
